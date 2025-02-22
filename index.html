@@ -40,6 +40,20 @@
         height: 100%;
         border: none;
       }
+      @keyframes glow {
+        0%, 100% {
+          text-shadow: 0 0 20px #fff,
+                     0 0 30px #2aa6b9,
+                     0 0 40px #030307,
+                     0 0 50px #432f61;
+        }
+        50% {
+          text-shadow: 0 0 10px #fff,
+                     0 0 20px #2aa6b9,
+                     0 0 30px #030307,
+                     0 0 40px #432f61;
+        }
+      }
       h1 {
         display: flex;
         flex-direction: column;
@@ -53,6 +67,7 @@
         line-height: 1;
         font-weight: bold;
         font-family: "Orbitron", sans-serif;
+        animation: glow 2s ease-in-out infinite;
       }
       .fixed-text {
         position: fixed;
@@ -61,6 +76,9 @@
         transform: translateX(-50%);
         color: white;
         font-size: 1.8rem; /* Increased from 1.2rem */
+        text-shadow: 0 0 10px #fff,
+                   0 0 20px #5541dd,
+                   0 0 30px #00ffff;
       }
       .social-icons {
         position: fixed;
